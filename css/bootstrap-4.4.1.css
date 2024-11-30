@@ -4,7 +4,6 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -55,18 +54,13 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "Roboto" -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family:'Montserrat', sans-serif;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff;
-}
-.i-regular {
-  font-family: "Imperial Script", cursive;
-  font-weight: 400;
-  font-style: normal;
+  background-color: #000;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -165,7 +159,7 @@ a {
 }
 
 a:hover {
-  color: #0056b3;
+  color: #fff;
   text-decoration: underline;
 }
 
@@ -393,13 +387,14 @@ h6, .h6 {
 }
 
 .lead {
+	color:#fff;
   font-size: 1.25rem;
   font-weight: 300;
 }
 
 .display-1 {
   font-size: 6rem;
-  font-weight: 300;
+  font-weight: 600;
   line-height: 1.2;
 }
 
@@ -2563,15 +2558,15 @@ fieldset:disabled a.btn {
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
+  color: #000;
+  background-color: #ff4081;
+  border-color: #ff4081;
 }
 
 .btn-primary:hover {
-  color: #fff;
-  background-color: #0069d9;
-  border-color: #0062cc;
+  color: #000;
+  background-color: #fff;
+  border-color: #fff;
 }
 
 .btn-primary:focus, .btn-primary.focus {
@@ -4251,7 +4246,7 @@ input[type="button"].btn-block {
 }
 
 .nav-link.disabled {
-  color: #6c757d;
+  color: #fff;
   pointer-events: none;
   cursor: default;
 }
@@ -4275,15 +4270,15 @@ input[type="button"].btn-block {
 }
 
 .nav-tabs .nav-link.disabled {
-  color: #6c757d;
+  color: #fff;
   background-color: transparent;
   border-color: transparent;
 }
 
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
-  color: #495057;
-  background-color: #fff;
+  color: #fff;
+  background-color: #ff4081;
   border-color: #dee2e6 #dee2e6 #fff;
 }
 
@@ -4300,7 +4295,7 @@ input[type="button"].btn-block {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #007bff;
+  background-color: #ff4081;
 }
 
 .nav-fill .nav-item {
@@ -4361,7 +4356,7 @@ input[type="button"].btn-block {
 }
 
 .navbar-brand:hover, .navbar-brand:focus {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 .navbar-nav {
@@ -4635,19 +4630,19 @@ input[type="button"].btn-block {
 }
 
 .navbar-light .navbar-brand {
-  color: rgba(0, 0, 0, 0.9);
+  color: #ff4081;
 }
 
 .navbar-light .navbar-brand:hover, .navbar-light .navbar-brand:focus {
-  color: rgba(0, 0, 0, 0.9);
+  color: #ff4081;
 }
 
 .navbar-light .navbar-nav .nav-link {
-  color: rgba(0, 0, 0, 0.5);
+  color: #fff;
 }
 
 .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus {
-  color: rgba(0, 0, 0, 0.7);
+  color: #ff4081;
 }
 
 .navbar-light .navbar-nav .nav-link.disabled {
@@ -4683,7 +4678,7 @@ input[type="button"].btn-block {
 }
 
 .navbar-dark .navbar-brand {
-  color: #fff;
+  color: #ff4081;
 }
 
 .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
@@ -4760,10 +4755,15 @@ input[type="button"].btn-block {
 }
 
 .card-body {
+	background:#000;
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   min-height: 1px;
-  padding: 1.25rem;
+  padding: 0;
+	border-radius: 15px;/* Bo góc */
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Thêm bóng */
+    transition: transform 0.3s; /* Hiệu ứng khi hover */
+	border: 1px solid #d4d4d4
 }
 
 .card-title {
@@ -5444,7 +5444,7 @@ a.badge-dark:focus, a.badge-dark.focus {
   color: #fff;
   text-align: center;
   white-space: nowrap;
-  background-color: #007bff;
+  background-color: #ff4081;
   transition: width 0.6s ease;
 }
 
@@ -6699,7 +6699,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #000 !important;
+  background-color: #ff4081 !important;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
@@ -6759,7 +6759,7 @@ button.bg-danger:focus {
 }
 
 .bg-light {
-  background-color: #f8f9fa !important;
+  background-color: #000 !important;
 }
 
 a.bg-light:hover, a.bg-light:focus,
@@ -10041,7 +10041,9 @@ button.bg-dark:focus {
 }
 
 .text-primary {
-  color: pink !important;
+  color: #ff4081;
+	font-weight: 600
+!important;
 }
 
 a.text-primary:hover, a.text-primary:focus {
@@ -10049,7 +10051,8 @@ a.text-primary:hover, a.text-primary:focus {
 }
 
 .text-secondary {
-  color: blue !important;
+  color: #fff;
+	font-weight: 300!important;
 }
 
 a.text-secondary:hover, a.text-secondary:focus {
@@ -10109,7 +10112,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .text-muted {
-  color: #6c757d !important;
+  color: #fff !important;
 }
 
 .text-black-50 {
